@@ -1,0 +1,202 @@
+/*
+    US Elections Vote-Share Analysis — DAX measures
+    ------------------------------------------------
+    Model (see model.md):
+        'Fact Results'  (Cycle, StateKey, County, CandidateKey, Votes,
+                         County Total Votes, Ballots Cast, Registered Voters)
+        'Dim State'     (StateKey, State, State Name)
+        'Dim Candidate' (CandidateKey, Candidate, Party, Cycle)
+
+    Relationships: Dim State 1 -> * Fact Results on [StateKey];
+                   Dim Candidate 1 -> * Fact Results on [CandidateKey].
+
+    Notes:
+    - [County Total Votes], [Ballots Cast] and [Registered Voters] repeat on
+      every candidate row of a county, so they must never be SUM-med directly
+      from the fact table. The "County Total Votes", "Ballots Cast" and
+      "Registered Voters" measures below de-duplicate them with SUMX over
+      SUMMARIZE, taking MAX per county.
+    - Presidential cycles are four years apart, so cycle-over-cycle measures
+      compare against Cycle - 4. They return BLANK when only one cycle is in
+      context.
+    - Create a dedicated "Measures" table in Power BI and paste each measure
+      in; set the format strings noted next to each measure.
+*/
+
+// ---------------------------------------------------------------------------
+// Base totals
+// ---------------------------------------------------------------------------
+
+Total Votes =
+SUM ( 'Fact Results'[Votes] )
+// Format: #,0
+
+Total Races =
+DISTINCTCOUNT ( 'Fact Results'[County] )
+// Format: #,0 — counties (races) in the current filter context.
+
+// ---------------------------------------------------------------------------
+// Vote share
+// ---------------------------------------------------------------------------
+
+Vote Share % =
+DIVIDE (
+    [Total Votes],
+    CALCULATE ( [Total Votes], ALL ( 'Dim Candidate' ) )
+)
+// Format: Percentage, 1 decimal.
+// Removes the candidate filter while keeping state / county / cycle filters,
+// so each candidate is expressed as a share of the whole race in context.
+
+Two-Party Votes =
+CALCULATE (
+    [Total Votes],
+    'Dim Candidate'[Party] IN { "DEM", "REP" }
+)
+// Format: #,0
+
+Two-Party Vote Share % =
+DIVIDE ( [Total Votes], [Two-Party Votes] )
+// Format: Percentage, 1 decimal. Vote share normalized over DEM + REP only.
+
+// ---------------------------------------------------------------------------
+// Turnout (built on de-duplicated county-level values)
+// ---------------------------------------------------------------------------
+
+County Total Votes =
+SUMX (
+    SUMMARIZE (
+        'Fact Results',
+        'Dim State'[State],
+        'Fact Results'[County],
+        'Fact Results'[Cycle],
+        "@CountyVotes", MAX ( 'Fact Results'[County Total Votes] )
+    ),
+    [@CountyVotes]
+)
+// Format: #,0
+
+Ballots Cast =
+SUMX (
+    SUMMARIZE (
+        'Fact Results',
+        'Dim State'[State],
+        'Fact Results'[County],
+        'Fact Results'[Cycle],
+        "@Ballots", MAX ( 'Fact Results'[Ballots Cast] )
+    ),
+    [@Ballots]
+)
+// Format: #,0
+
+Registered Voters =
+SUMX (
+    SUMMARIZE (
+        'Fact Results',
+        'Dim State'[State],
+        'Fact Results'[County],
+        'Fact Results'[Cycle],
+        "@Registered", MAX ( 'Fact Results'[Registered Voters] )
+    ),
+    [@Registered]
+)
+// Format: #,0
+
+Turnout % =
+DIVIDE ( [County Total Votes], [Ballots Cast] )
+// Format: Percentage, 1 decimal. Share of cast ballots that voted the office.
+
+Registration Turnout % =
+DIVIDE ( [Ballots Cast], [Registered Voters] )
+// Format: Percentage, 1 decimal.
+
+// ---------------------------------------------------------------------------
+// Winner and margin
+// ---------------------------------------------------------------------------
+
+Winner =
+VAR CandidateVotes =
+    ADDCOLUMNS (
+        VALUES ( 'Dim Candidate'[Candidate] ),
+        "@Votes", [Total Votes]
+    )
+VAR TopVotes =
+    MAXX ( CandidateVotes, [@Votes] )
+RETURN
+    MAXX (
+        FILTER ( CandidateVotes, [@Votes] = TopVotes ),
+        'Dim Candidate'[Candidate]
+    )
+// Text. Winning candidate in the current context (state / county / cycle).
+
+Margin (Votes) =
+VAR CandidateVotes =
+    ADDCOLUMNS (
+        VALUES ( 'Dim Candidate'[Candidate] ),
+        "@Votes", [Total Votes]
+    )
+VAR TopVotes =
+    MAXX ( CandidateVotes, [@Votes] )
+VAR RunnerUpVotes =
+    MAXX (
+        FILTER ( CandidateVotes, [@Votes] < TopVotes ),
+        [@Votes]
+    )
+RETURN
+    TopVotes - RunnerUpVotes
+// Format: #,0
+
+Margin % =
+DIVIDE (
+    [Margin (Votes)],
+    CALCULATE ( [Total Votes], ALL ( 'Dim Candidate' ) )
+)
+// Format: Percentage, 1 decimal.
+
+// ---------------------------------------------------------------------------
+// Cycle over cycle (current cycle vs. Cycle - 4)
+// ---------------------------------------------------------------------------
+
+Votes (Previous Cycle) =
+VAR CurrentCycle =
+    MAX ( 'Fact Results'[Cycle] )
+RETURN
+    CALCULATE (
+        [Total Votes],
+        FILTER (
+            ALL ( 'Fact Results'[Cycle] ),
+            'Fact Results'[Cycle] = CurrentCycle - 4
+        )
+    )
+// Format: #,0
+
+Vote Share % (Previous Cycle) =
+VAR CurrentCycle =
+    MAX ( 'Fact Results'[Cycle] )
+RETURN
+    CALCULATE (
+        [Vote Share %],
+        FILTER (
+            ALL ( 'Fact Results'[Cycle] ),
+            'Fact Results'[Cycle] = CurrentCycle - 4
+        )
+    )
+// Format: Percentage, 1 decimal.
+
+Vote Share Swing (pp) =
+VAR CurrentShare = [Vote Share %]
+VAR PreviousShare = [Vote Share % (Previous Cycle)]
+RETURN
+    IF (
+        NOT ISBLANK ( PreviousShare ),
+        CurrentShare - PreviousShare
+    )
+// Format: Percentage, 1 decimal, show as percentage points.
+// Positive = the candidate/party gained share vs. the previous cycle.
+
+Vote Growth % =
+DIVIDE (
+    [Total Votes] - [Votes (Previous Cycle)],
+    [Votes (Previous Cycle)]
+)
+// Format: Percentage, 1 decimal.
