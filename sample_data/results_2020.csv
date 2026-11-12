@@ -1,0 +1,69 @@
+cycle,state,state_name,county,candidate,party,votes,county_total_votes,ballots_cast,registered_voters
+2020,PA,Pennsylvania,Philadelphia,Joseph R. Biden,DEM,602504,742000,753299,1017972
+2020,PA,Pennsylvania,Philadelphia,Donald J. Trump,REP,124656,742000,753299,1017972
+2020,PA,Pennsylvania,Philadelphia,Jo Jorgensen,LIB,8162,742000,753299,1017972
+2020,PA,Pennsylvania,Philadelphia,Other Candidates,OTH,6678,742000,753299,1017972
+2020,PA,Pennsylvania,Allegheny,Joseph R. Biden,DEM,412620,690000,700508,946632
+2020,PA,Pennsylvania,Allegheny,Donald J. Trump,REP,263580,690000,700508,946632
+2020,PA,Pennsylvania,Allegheny,Jo Jorgensen,LIB,7590,690000,700508,946632
+2020,PA,Pennsylvania,Allegheny,Other Candidates,OTH,6210,690000,700508,946632
+2020,PA,Pennsylvania,Montgomery,Joseph R. Biden,DEM,316130,505000,512690,692824
+2020,PA,Pennsylvania,Montgomery,Donald J. Trump,REP,178770,505000,512690,692824
+2020,PA,Pennsylvania,Montgomery,Jo Jorgensen,LIB,5555,505000,512690,692824
+2020,PA,Pennsylvania,Montgomery,Other Candidates,OTH,4545,505000,512690,692824
+2020,PA,Pennsylvania,Erie,Joseph R. Biden,DEM,63404,131000,132995,179723
+2020,PA,Pennsylvania,Erie,Donald J. Trump,REP,64976,131000,132995,179723
+2020,PA,Pennsylvania,Erie,Jo Jorgensen,LIB,1441,131000,132995,179723
+2020,PA,Pennsylvania,Erie,Other Candidates,OTH,1179,131000,132995,179723
+2020,GA,Georgia,Fulton,Joseph R. Biden,DEM,381472,524000,531980,718892
+2020,GA,Georgia,Fulton,Donald J. Trump,REP,132048,524000,531980,718892
+2020,GA,Georgia,Fulton,Jo Jorgensen,LIB,5764,524000,531980,718892
+2020,GA,Georgia,Fulton,Other Candidates,OTH,4716,524000,531980,718892
+2020,GA,Georgia,DeKalb,Joseph R. Biden,DEM,317824,382000,387817,524077
+2020,GA,Georgia,DeKalb,Donald J. Trump,REP,56536,382000,387817,524077
+2020,GA,Georgia,DeKalb,Jo Jorgensen,LIB,4202,382000,387817,524077
+2020,GA,Georgia,DeKalb,Other Candidates,OTH,3438,382000,387817,524077
+2020,GA,Georgia,Gwinnett,Joseph R. Biden,DEM,267472,458000,464975,628345
+2020,GA,Georgia,Gwinnett,Donald J. Trump,REP,181368,458000,464975,628345
+2020,GA,Georgia,Gwinnett,Jo Jorgensen,LIB,5038,458000,464975,628345
+2020,GA,Georgia,Gwinnett,Other Candidates,OTH,4122,458000,464975,628345
+2020,GA,Georgia,Cobb,Joseph R. Biden,DEM,237023,421000,427411,577582
+2020,GA,Georgia,Cobb,Donald J. Trump,REP,175557,421000,427411,577582
+2020,GA,Georgia,Cobb,Jo Jorgensen,LIB,4631,421000,427411,577582
+2020,GA,Georgia,Cobb,Other Candidates,OTH,3789,421000,427411,577582
+2020,AZ,Arizona,Maricopa,Joseph R. Biden,DEM,1027796,2068000,2099492,2837151
+2020,AZ,Arizona,Maricopa,Donald J. Trump,REP,998844,2068000,2099492,2837151
+2020,AZ,Arizona,Maricopa,Jo Jorgensen,LIB,22748,2068000,2099492,2837151
+2020,AZ,Arizona,Maricopa,Other Candidates,OTH,18612,2068000,2099492,2837151
+2020,AZ,Arizona,Pima,Joseph R. Biden,DEM,303030,518000,525888,710659
+2020,AZ,Arizona,Pima,Donald J. Trump,REP,204610,518000,525888,710659
+2020,AZ,Arizona,Pima,Jo Jorgensen,LIB,5698,518000,525888,710659
+2020,AZ,Arizona,Pima,Other Candidates,OTH,4662,518000,525888,710659
+2020,AZ,Arizona,Pinal,Joseph R. Biden,DEM,75012,188000,190863,257923
+2020,AZ,Arizona,Pinal,Donald J. Trump,REP,109228,188000,190863,257923
+2020,AZ,Arizona,Pinal,Jo Jorgensen,LIB,2068,188000,190863,257923
+2020,AZ,Arizona,Pinal,Other Candidates,OTH,1692,188000,190863,257923
+2020,WI,Wisconsin,Milwaukee,Joseph R. Biden,DEM,323856,468000,475127,642064
+2020,WI,Wisconsin,Milwaukee,Donald J. Trump,REP,134784,468000,475127,642064
+2020,WI,Wisconsin,Milwaukee,Jo Jorgensen,LIB,5148,468000,475127,642064
+2020,WI,Wisconsin,Milwaukee,Other Candidates,OTH,4212,468000,475127,642064
+2020,WI,Wisconsin,Dane,Joseph R. Biden,DEM,253172,334000,339086,458224
+2020,WI,Wisconsin,Dane,Donald J. Trump,REP,74148,334000,339086,458224
+2020,WI,Wisconsin,Dane,Jo Jorgensen,LIB,3674,334000,339086,458224
+2020,WI,Wisconsin,Dane,Other Candidates,OTH,3006,334000,339086,458224
+2020,WI,Wisconsin,Waukesha,Joseph R. Biden,DEM,100084,262000,265990,359446
+2020,WI,Wisconsin,Waukesha,Donald J. Trump,REP,156676,262000,265990,359446
+2020,WI,Wisconsin,Waukesha,Jo Jorgensen,LIB,2882,262000,265990,359446
+2020,WI,Wisconsin,Waukesha,Other Candidates,OTH,2358,262000,265990,359446
+2020,MI,Michigan,Wayne,Joseph R. Biden,DEM,565810,826000,838579,1133215
+2020,MI,Michigan,Wayne,Donald J. Trump,REP,243670,826000,838579,1133215
+2020,MI,Michigan,Wayne,Jo Jorgensen,LIB,9086,826000,838579,1133215
+2020,MI,Michigan,Wayne,Other Candidates,OTH,7434,826000,838579,1133215
+2020,MI,Michigan,Oakland,Joseph R. Biden,DEM,397478,706000,716751,968582
+2020,MI,Michigan,Oakland,Donald J. Trump,REP,294402,706000,716751,968582
+2020,MI,Michigan,Oakland,Jo Jorgensen,LIB,7766,706000,716751,968582
+2020,MI,Michigan,Oakland,Other Candidates,OTH,6354,706000,716751,968582
+2020,MI,Michigan,Kent,Joseph R. Biden,DEM,164502,342000,347208,469200
+2020,MI,Michigan,Kent,Donald J. Trump,REP,170658,342000,347208,469200
+2020,MI,Michigan,Kent,Jo Jorgensen,LIB,3762,342000,347208,469200
+2020,MI,Michigan,Kent,Other Candidates,OTH,3078,342000,347208,469200
