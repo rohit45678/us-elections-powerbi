@@ -1,0 +1,69 @@
+cycle,state,state_name,county,candidate,party,votes,county_total_votes,ballots_cast,registered_voters
+2024,PA,Pennsylvania,Philadelphia,Kamala D. Harris,DEM,568425,715000,725888,980930
+2024,PA,Pennsylvania,Philadelphia,Donald J. Trump,REP,133705,715000,725888,980930
+2024,PA,Pennsylvania,Philadelphia,Jill Stein,GRN,5005,715000,725888,980930
+2024,PA,Pennsylvania,Philadelphia,Other Candidates,OTH,7865,715000,725888,980930
+2024,PA,Pennsylvania,Allegheny,Kamala D. Harris,DEM,393120,672000,682234,921938
+2024,PA,Pennsylvania,Allegheny,Donald J. Trump,REP,266784,672000,682234,921938
+2024,PA,Pennsylvania,Allegheny,Jill Stein,GRN,4704,672000,682234,921938
+2024,PA,Pennsylvania,Allegheny,Other Candidates,OTH,7392,672000,682234,921938
+2024,PA,Pennsylvania,Montgomery,Kamala D. Harris,DEM,327168,512000,519797,702428
+2024,PA,Pennsylvania,Montgomery,Donald J. Trump,REP,175616,512000,519797,702428
+2024,PA,Pennsylvania,Montgomery,Jill Stein,GRN,3584,512000,519797,702428
+2024,PA,Pennsylvania,Montgomery,Other Candidates,OTH,5632,512000,519797,702428
+2024,PA,Pennsylvania,Erie,Kamala D. Harris,DEM,60501,129000,130964,176978
+2024,PA,Pennsylvania,Erie,Donald J. Trump,REP,66177,129000,130964,176978
+2024,PA,Pennsylvania,Erie,Jill Stein,GRN,903,129000,130964,176978
+2024,PA,Pennsylvania,Erie,Other Candidates,OTH,1419,129000,130964,176978
+2024,GA,Georgia,Fulton,Kamala D. Harris,DEM,380196,531000,539086,728495
+2024,GA,Georgia,Fulton,Donald J. Trump,REP,141246,531000,539086,728495
+2024,GA,Georgia,Fulton,Jill Stein,GRN,3717,531000,539086,728495
+2024,GA,Georgia,Fulton,Other Candidates,OTH,5841,531000,539086,728495
+2024,GA,Georgia,DeKalb,Kamala D. Harris,DEM,319712,388000,393909,532309
+2024,GA,Georgia,DeKalb,Donald J. Trump,REP,61304,388000,393909,532309
+2024,GA,Georgia,DeKalb,Jill Stein,GRN,2716,388000,393909,532309
+2024,GA,Georgia,DeKalb,Other Candidates,OTH,4268,388000,393909,532309
+2024,GA,Georgia,Gwinnett,Kamala D. Harris,DEM,267999,471000,478173,646180
+2024,GA,Georgia,Gwinnett,Donald J. Trump,REP,194523,471000,478173,646180
+2024,GA,Georgia,Gwinnett,Jill Stein,GRN,3297,471000,478173,646180
+2024,GA,Georgia,Gwinnett,Other Candidates,OTH,5181,471000,478173,646180
+2024,GA,Georgia,Cobb,Kamala D. Harris,DEM,244959,429000,435533,588558
+2024,GA,Georgia,Cobb,Donald J. Trump,REP,176319,429000,435533,588558
+2024,GA,Georgia,Cobb,Jill Stein,GRN,3003,429000,435533,588558
+2024,GA,Georgia,Cobb,Other Candidates,OTH,4719,429000,435533,588558
+2024,AZ,Arizona,Maricopa,Kamala D. Harris,DEM,999180,2135000,2167513,2929072
+2024,AZ,Arizona,Maricopa,Donald J. Trump,REP,1097390,2135000,2167513,2929072
+2024,AZ,Arizona,Maricopa,Jill Stein,GRN,14945,2135000,2167513,2929072
+2024,AZ,Arizona,Maricopa,Other Candidates,OTH,23485,2135000,2167513,2929072
+2024,AZ,Arizona,Pima,Kamala D. Harris,DEM,300872,526000,534010,721635
+2024,AZ,Arizona,Pima,Donald J. Trump,REP,215660,526000,534010,721635
+2024,AZ,Arizona,Pima,Jill Stein,GRN,3682,526000,534010,721635
+2024,AZ,Arizona,Pima,Other Candidates,OTH,5786,526000,534010,721635
+2024,AZ,Arizona,Pinal,Kamala D. Harris,DEM,76782,201000,204061,275758
+2024,AZ,Arizona,Pinal,Donald J. Trump,REP,120600,201000,204061,275758
+2024,AZ,Arizona,Pinal,Jill Stein,GRN,1407,201000,204061,275758
+2024,AZ,Arizona,Pinal,Other Candidates,OTH,2211,201000,204061,275758
+2024,WI,Wisconsin,Milwaukee,Kamala D. Harris,DEM,307812,452000,458883,620112
+2024,WI,Wisconsin,Milwaukee,Donald J. Trump,REP,136052,452000,458883,620112
+2024,WI,Wisconsin,Milwaukee,Jill Stein,GRN,3164,452000,458883,620112
+2024,WI,Wisconsin,Milwaukee,Other Candidates,OTH,4972,452000,458883,620112
+2024,WI,Wisconsin,Dane,Kamala D. Harris,DEM,262998,342000,347208,469200
+2024,WI,Wisconsin,Dane,Donald J. Trump,REP,72846,342000,347208,469200
+2024,WI,Wisconsin,Dane,Jill Stein,GRN,2394,342000,347208,469200
+2024,WI,Wisconsin,Dane,Other Candidates,OTH,3762,342000,347208,469200
+2024,WI,Wisconsin,Waukesha,Kamala D. Harris,DEM,105592,268000,272081,367677
+2024,WI,Wisconsin,Waukesha,Donald J. Trump,REP,157584,268000,272081,367677
+2024,WI,Wisconsin,Waukesha,Jill Stein,GRN,1876,268000,272081,367677
+2024,WI,Wisconsin,Waukesha,Other Candidates,OTH,2948,268000,272081,367677
+2024,MI,Michigan,Wayne,Kamala D. Harris,DEM,535458,798000,810152,1094800
+2024,MI,Michigan,Wayne,Donald J. Trump,REP,248178,798000,810152,1094800
+2024,MI,Michigan,Wayne,Jill Stein,GRN,5586,798000,810152,1094800
+2024,MI,Michigan,Wayne,Other Candidates,OTH,8778,798000,810152,1094800
+2024,MI,Michigan,Oakland,Kamala D. Harris,DEM,415004,718000,728934,985046
+2024,MI,Michigan,Oakland,Donald J. Trump,REP,290072,718000,728934,985046
+2024,MI,Michigan,Oakland,Jill Stein,GRN,5026,718000,728934,985046
+2024,MI,Michigan,Oakland,Other Candidates,OTH,7898,718000,728934,985046
+2024,MI,Michigan,Kent,Kamala D. Harris,DEM,175508,356000,361421,488407
+2024,MI,Michigan,Kent,Donald J. Trump,REP,174084,356000,361421,488407
+2024,MI,Michigan,Kent,Jill Stein,GRN,2492,356000,361421,488407
+2024,MI,Michigan,Kent,Other Candidates,OTH,3916,356000,361421,488407
